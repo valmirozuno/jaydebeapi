@@ -158,7 +158,7 @@ def _handle_sql_exception_jpype():
 def _jdbc_connect_jpype(jclassname, url, driver_args, jars, libs):
     import jpype
     if not jpype.isJVMStarted():
-        args = []
+        args = ['-Djavax.net.ssl.trustStore=/home/jose/squirrel-sql-3.9.1/quartzo.serpro.gov.br.jks']
         class_path = []
         if jars:
             class_path.extend(jars)
